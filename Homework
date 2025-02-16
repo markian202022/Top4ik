@@ -1,0 +1,25 @@
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def get_age(self):
+        return self.age
+
+
+class Driver(Person):
+    def __init__(self, name, age, license_number):
+        super().__init__(name, age)
+        self.license_number = license_number
+
+    def get_license_info(self):
+        return f"номер водійського посвідчення: {self.license_number}"
+
+
+person = Person("Володя:пасажир матршутки", "27 років")
+driver = Driver("Максим:водій маршкутки","51 років,", "CS26819573")
+
+print(person.name, person.get_age())
+print(driver.name, driver.get_age(), driver.get_license_info())
+
+
